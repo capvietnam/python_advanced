@@ -38,10 +38,23 @@ import sys
 
 
 def decrypt(encryption: str) -> str:
-    ...
+    message = []
+    i = 0
+    while i < len(encryption):
+        if encryption[i] == '.':
+            if i < len(encryption) - 1 and encryption[i + 1] == '.':
+                if message:
+                    message.pop()
+                i += 2
+            else:
+                i += 1
+        else:
+            message.append(encryption[i])
+            i += 1
+    return ''.join(message)
 
 
 if __name__ == '__main__':
-    data: str = sys.stdin.read()
+    data: str = sys.stdin.read().strip()
     decryption: str = decrypt(data)
     print(decryption)

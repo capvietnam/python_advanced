@@ -1,0 +1,218 @@
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1 168056  7744 ?        Ss   14:36   0:01 /sbin/init splash
+root           2  0.0  0.0      0     0 ?        S    14:36   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   14:36   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   14:36   0:00 [rcu_par_gp]
+root           5  0.0  0.0      0     0 ?        I<   14:36   0:00 [slub_flushwq]
+root           6  0.0  0.0      0     0 ?        I<   14:36   0:00 [netns]
+root           8  0.0  0.0      0     0 ?        I<   14:36   0:00 [kworker/0:0H-events_highpri]
+root          10  0.0  0.0      0     0 ?        I<   14:36   0:00 [mm_percpu_wq]
+root          11  0.0  0.0      0     0 ?        I    14:36   0:00 [rcu_tasks_kthread]
+root          12  0.0  0.0      0     0 ?        I    14:36   0:00 [rcu_tasks_rude_kthread]
+root          13  0.0  0.0      0     0 ?        I    14:36   0:00 [rcu_tasks_trace_kthread]
+root          14  0.0  0.0      0     0 ?        S    14:36   0:00 [ksoftirqd/0]
+root          15  0.0  0.0      0     0 ?        I    14:36   0:02 [rcu_preempt]
+root          16  0.0  0.0      0     0 ?        S    14:36   0:00 [migration/0]
+root          17  0.0  0.0      0     0 ?        S    14:36   0:00 [idle_inject/0]
+root          19  0.0  0.0      0     0 ?        S    14:36   0:00 [cpuhp/0]
+root          20  0.0  0.0      0     0 ?        S    14:36   0:00 [cpuhp/1]
+root          21  0.0  0.0      0     0 ?        S    14:36   0:00 [idle_inject/1]
+root          22  0.0  0.0      0     0 ?        S    14:36   0:00 [migration/1]
+root          23  0.0  0.0      0     0 ?        S    14:36   0:00 [ksoftirqd/1]
+root          25  0.0  0.0      0     0 ?        I<   14:36   0:00 [kworker/1:0H-kblockd]
+root          26  0.0  0.0      0     0 ?        S    14:36   0:00 [kdevtmpfs]
+root          27  0.0  0.0      0     0 ?        I<   14:36   0:00 [inet_frag_wq]
+root          28  0.0  0.0      0     0 ?        S    14:36   0:00 [kauditd]
+root          29  0.0  0.0      0     0 ?        S    14:36   0:00 [khungtaskd]
+root          31  0.0  0.0      0     0 ?        S    14:36   0:00 [oom_reaper]
+root          33  0.0  0.0      0     0 ?        I<   14:36   0:00 [writeback]
+root          34  0.0  0.0      0     0 ?        S    14:36   0:00 [kcompactd0]
+root          35  0.0  0.0      0     0 ?        SN   14:36   0:00 [ksmd]
+root          36  0.0  0.0      0     0 ?        SN   14:36   0:00 [khugepaged]
+root          37  0.0  0.0      0     0 ?        I<   14:36   0:00 [kintegrityd]
+root          38  0.0  0.0      0     0 ?        I<   14:36   0:00 [kblockd]
+root          39  0.0  0.0      0     0 ?        I<   14:36   0:00 [blkcg_punt_bio]
+root          40  0.0  0.0      0     0 ?        I<   14:36   0:00 [tpm_dev_wq]
+root          41  0.0  0.0      0     0 ?        I<   14:36   0:00 [ata_sff]
+root          42  0.0  0.0      0     0 ?        I<   14:36   0:00 [md]
+root          43  0.0  0.0      0     0 ?        I<   14:36   0:00 [edac-poller]
+root          44  0.0  0.0      0     0 ?        I<   14:36   0:00 [devfreq_wq]
+root          45  0.0  0.0      0     0 ?        S    14:36   0:00 [watchdogd]
+root          46  0.0  0.0      0     0 ?        I<   14:36   0:00 [kworker/0:1H-kblockd]
+root          47  0.1  0.0      0     0 ?        S    14:36   0:10 [kswapd0]
+root          48  0.0  0.0      0     0 ?        S    14:36   0:00 [ecryptfs-kthread]
+root          55  0.0  0.0      0     0 ?        I<   14:36   0:00 [kthrotld]
+root          60  0.0  0.0      0     0 ?        I<   14:36   0:00 [acpi_thermal_pm]
+root          61  0.0  0.0      0     0 ?        S    14:36   0:00 [xenbus_probe]
+root          62  0.0  0.0      0     0 ?        S    14:36   0:00 [scsi_eh_0]
+root          63  0.0  0.0      0     0 ?        I<   14:36   0:00 [scsi_tmf_0]
+root          64  0.0  0.0      0     0 ?        S    14:36   0:00 [scsi_eh_1]
+root          65  0.0  0.0      0     0 ?        I<   14:36   0:00 [scsi_tmf_1]
+root          66  0.0  0.0      0     0 ?        I<   14:36   0:00 [vfio-irqfd-clea]
+root          68  0.0  0.0      0     0 ?        I<   14:36   0:00 [kworker/1:1H-kblockd]
+root          69  0.0  0.0      0     0 ?        I<   14:36   0:00 [mld]
+root          70  0.0  0.0      0     0 ?        I<   14:36   0:00 [ipv6_addrconf]
+root          75  0.0  0.0      0     0 ?        I<   14:36   0:00 [kstrp]
+root          81  0.0  0.0      0     0 ?        I<   14:36   0:00 [zswap-shrink]
+root          82  0.0  0.0      0     0 ?        I<   14:36   0:00 [kworker/u5:0]
+root         128  0.0  0.0      0     0 ?        I<   14:36   0:00 [charger_manager]
+root         174  0.0  0.0      0     0 ?        S    14:36   0:00 [scsi_eh_2]
+root         176  0.0  0.0      0     0 ?        I<   14:36   0:00 [scsi_tmf_2]
+root         200  0.0  0.0      0     0 ?        S    14:36   0:00 [jbd2/sda2-8]
+root         201  0.0  0.0      0     0 ?        I<   14:36   0:00 [ext4-rsv-conver]
+root         240  0.0  0.2  65216 10804 ?        S<s  14:36   0:00 /lib/systemd/systemd-journald
+root         274  0.0  0.0      0     0 ?        S    14:36   0:01 [irq/18-vmwgfx]
+root         275  0.0  0.0      0     0 ?        S    14:36   0:00 [card0-crtc0]
+root         276  0.0  0.0      0     0 ?        S    14:36   0:00 [card0-crtc1]
+root         277  0.0  0.0      0     0 ?        S    14:36   0:00 [card0-crtc2]
+root         278  0.0  0.0      0     0 ?        S    14:36   0:00 [card0-crtc3]
+root         279  0.0  0.0      0     0 ?        S    14:36   0:00 [card0-crtc4]
+root         280  0.0  0.0      0     0 ?        S    14:36   0:00 [card0-crtc5]
+root         281  0.0  0.0      0     0 ?        S    14:36   0:00 [card0-crtc6]
+root         282  0.0  0.0      0     0 ?        S    14:36   0:00 [card0-crtc7]
+root         301  0.0  0.0  26824  2456 ?        Ss   14:36   0:00 /lib/systemd/systemd-udevd
+root         371  0.0  0.0      0     0 ?        I<   14:36   0:00 [cryptd]
+root         404  0.0  0.0      0     0 ?        I    14:36   0:02 [kworker/0:3-events]
+systemd+     586  0.0  0.0  14828  2388 ?        Ss   14:36   0:06 /lib/systemd/systemd-oomd
+systemd+     587  0.0  0.1  25524  5428 ?        Ss   14:36   0:00 /lib/systemd/systemd-resolved
+systemd+     589  0.0  0.0  89380  2888 ?        Ssl  14:36   0:00 /lib/systemd/systemd-timesyncd
+root         641  0.0  0.1 249016  5568 ?        Ssl  14:36   0:00 /usr/libexec/accounts-daemon
+root         642  0.0  0.0   2812  1076 ?        Ss   14:36   0:00 /usr/sbin/acpid
+avahi        645  0.0  0.0   7624  2464 ?        Ss   14:36   0:00 avahi-daemon: running [cap-VirtualBox.local]
+root         646  0.0  0.0  18148  2656 ?        Ss   14:36   0:00 /usr/sbin/cron -f -P
+message+     647  0.0  0.1  10936  4532 ?        Ss   14:36   0:00 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root         649  0.0  0.1 270508  6756 ?        Ssl  14:36   0:00 /usr/sbin/NetworkManager --no-daemon
+root         659  0.0  0.0  82764  2924 ?        Ssl  14:36   0:00 /usr/sbin/irqbalance --foreground
+root         665  0.0  0.1  49736  7012 ?        Ss   14:36   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root         668  0.0  0.1 252292  6204 ?        Ssl  14:36   0:00 /usr/libexec/polkitd --no-debug
+root         671  0.0  0.1 249080  4276 ?        Ssl  14:36   0:00 /usr/libexec/power-profiles-daemon
+syslog       672  0.0  0.0 222400  3320 ?        Ssl  14:36   0:00 /usr/sbin/rsyslogd -n -iNONE
+root         673  0.0  0.2 875604 10484 ?        Ssl  14:36   0:03 /usr/lib/snapd/snapd
+root         674  0.0  0.1 245200  4920 ?        Ssl  14:36   0:00 /usr/libexec/switcheroo-control
+root         675  0.0  0.0  23668  3616 ?        Ss   14:36   0:00 /lib/systemd/systemd-logind
+root         677  0.0  0.1 393068  6580 ?        Ssl  14:36   0:00 /usr/libexec/udisks2/udisksd
+root         678  0.0  0.0  16496  2276 ?        Ss   14:36   0:00 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+avahi        680  0.0  0.0   7440   280 ?        S    14:36   0:00 avahi-daemon: chroot helper
+root         733  0.0  0.1 244212  5404 ?        Ssl  14:36   0:00 /usr/sbin/ModemManager
+root         735  0.0  0.1  81256  5644 ?        Ss   14:36   0:00 /usr/sbin/cupsd -l
+root         739  0.0  0.1 126792  7684 ?        Ssl  14:36   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root         759  0.0  0.1 250064  5220 ?        Ssl  14:36   0:00 /usr/sbin/gdm3
+root         770  0.0  0.1 179296  5884 ?        Sl   14:36   0:00 gdm-session-worker [pam/gdm-autologin]
+root         786  0.0  0.1 172612  5928 ?        Ssl  14:36   0:00 /usr/sbin/cups-browsed
+kernoops     791  0.0  0.0  13080   132 ?        Ss   14:36   0:00 /usr/sbin/kerneloops --test
+kernoops     793  0.0  0.0  13080   312 ?        Ss   14:36   0:00 /usr/sbin/kerneloops
+cap          839  0.0  0.1  17980  5288 ?        Ss   14:36   0:00 /lib/systemd/systemd --user
+cap          840  0.0  0.0 104324   692 ?        S    14:36   0:00 (sd-pam)
+cap          851  0.0  0.0  48220  3664 ?        S<sl 14:36   0:00 /usr/bin/pipewire
+cap          853  0.0  0.0  32108  3320 ?        Ssl  14:36   0:00 /usr/bin/pipewire-media-session
+cap          854  0.0  0.2 1431712 11352 ?       S<sl 14:36   0:00 /usr/bin/pulseaudio --daemonize=no --log-target=journal
+cap          855  0.0  0.0  76420   664 ?        Ss   14:36   0:01 /snap/snapd-desktop-integration/57/usr/bin/snapd-desktop-integration
+cap          858  0.0  0.1 397280  4560 ?        SLl  14:36   0:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+cap          863  0.0  0.1 171260  4512 tty2     Ssl+ 14:36   0:00 /usr/libexec/gdm-wayland-session env GNOME_SHELL_SESSION_MODE=ubuntu /usr/bin/gnome-session --session=ubuntu
+rtkit        864  0.0  0.0 154000   828 ?        SNsl 14:36   0:00 /usr/libexec/rtkit-daemon
+cap          866  0.0  0.1   9884  4332 ?        Ss   14:36   0:01 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+cap          885  0.0  0.1 249556  5280 ?        Ssl  14:36   0:00 /usr/libexec/gvfsd
+cap          886  0.0  0.1 231896  6500 tty2     Sl+  14:36   0:00 /usr/libexec/gnome-session-binary --session=ubuntu
+cap          928  0.0  0.0 380884  3844 ?        Sl   14:36   0:00 /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f
+cap          955  0.0  0.0 100556  3460 ?        Ssl  14:36   0:00 /usr/libexec/gnome-session-ctl --monitor
+cap          976  0.0  0.1 529080  7664 ?        Ssl  14:36   0:00 /usr/libexec/gnome-session-binary --systemd-service --session=ubuntu
+cap         1001 11.8  8.1 4889332 327212 ?      Ssl  14:36  12:15 /usr/bin/gnome-shell
+cap         1002  0.0  0.1 309616  5112 ?        Sl   14:36   0:00 /usr/libexec/at-spi-bus-launcher --launch-immediately
+cap         1011  0.0  0.0   8564  2928 ?        S    14:36   0:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 11 --address=unix:path=/run/user/1000/at-spi/bus
+cap         1030  0.0  0.1 546068  5432 ?        Ssl  14:36   0:00 /usr/libexec/xdg-document-portal
+cap         1033  0.0  0.1 245184  4788 ?        Ssl  14:36   0:00 /usr/libexec/xdg-permission-store
+root        1040  0.0  0.0   2792   976 ?        Ss   14:36   0:00 fusermount3 -o rw,nosuid,nodev,fsname=portal,auto_unmount,subtype=portal -- /run/user/1000/doc
+cap         1161  0.0  0.0 309408  3132 ?        Sl   14:36   0:00 /snap/snapd-desktop-integration/57/usr/bin/snapd-desktop-integration
+cap         1165  0.0  0.1 632876  7756 ?        Ssl  14:36   0:00 /usr/libexec/xdg-desktop-portal
+cap         1169  0.0  0.2 672492 10396 ?        Ssl  14:36   0:00 /usr/libexec/xdg-desktop-portal-gnome
+cap         1176  0.0  0.1 796140  5404 ?        Sl   14:36   0:00 /usr/libexec/gnome-shell-calendar-server
+cap         1182  0.0  0.2 1019684 11564 ?       Ssl  14:36   0:00 /usr/libexec/evolution-source-registry
+root        1187  0.0  0.1 251064  5100 ?        Ssl  14:36   0:00 /usr/libexec/upowerd
+cap         1192  0.0  0.6 647552 28004 ?        SLl  14:36   0:00 /usr/libexec/goa-daemon
+cap         1197  0.0  0.1 157080  4616 ?        Ssl  14:36   0:00 /usr/libexec/dconf-service
+cap         1200  0.0  0.1 171976  4960 ?        Ssl  14:36   0:00 /usr/libexec/gvfsd-metadata
+cap         1203  0.0  0.1 325148  6008 ?        Ssl  14:36   0:00 /usr/libexec/gvfs-udisks2-volume-monitor
+cap         1213  0.0  0.4 1222124 18244 ?       Ssl  14:36   0:00 /usr/libexec/evolution-calendar-factory
+cap         1218  0.0  0.1 245332  5072 ?        Ssl  14:36   0:00 /usr/libexec/gvfs-mtp-volume-monitor
+cap         1224  0.0  0.1 246288  5248 ?        Ssl  14:36   0:00 /usr/libexec/gvfs-gphoto2-volume-monitor
+cap         1235  0.0  0.1 347456  5656 ?        Sl   14:36   0:00 /usr/libexec/goa-identity-service
+cap         1236  0.0  0.1 246332  5572 ?        Ssl  14:36   0:00 /usr/libexec/gvfs-goa-volume-monitor
+cap         1243  0.0  0.1 324108  5432 ?        Ssl  14:36   0:00 /usr/libexec/gvfs-afc-volume-monitor
+root        1256  0.1  0.2 381768 11552 ?        Ssl  14:36   0:09 /usr/libexec/packagekitd
+cap         1269  0.0  0.1 681440  7996 ?        Ssl  14:36   0:00 /usr/libexec/evolution-addressbook-factory
+cap         1285  0.0  0.3 2543016 13044 ?       Sl   14:36   0:00 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.Shell.Notifications
+cap         1287  0.0  0.1 162676  4648 ?        Sl   14:36   0:00 /usr/libexec/at-spi2-registryd --use-gnome-session
+cap         1296  0.0  0.0   2888   752 ?        Ss   14:36   0:00 sh -c /usr/bin/ibus-daemon --panel disable $([ "$XDG_SESSION_TYPE" = "x11" ] && echo "--xim")
+cap         1297  0.0  0.1 319564  5152 ?        Ssl  14:36   0:00 /usr/libexec/gsd-a11y-settings
+cap         1299  0.0  0.1 323852  6364 ?        Sl   14:36   0:03 /usr/bin/ibus-daemon --panel disable
+cap         1300  0.0  0.2 460724 10172 ?        Ssl  14:36   0:00 /usr/libexec/gsd-color
+cap         1302  0.0  0.1 384588  7528 ?        Ssl  14:36   0:00 /usr/libexec/gsd-datetime
+cap         1307  0.0  0.1 321064  5512 ?        Ssl  14:36   0:00 /usr/libexec/gsd-housekeeping
+cap         1311  0.0  0.2 350256  9068 ?        Ssl  14:36   0:00 /usr/libexec/gsd-keyboard
+cap         1312  0.0  0.2 873908 11524 ?        Ssl  14:36   0:00 /usr/libexec/gsd-media-keys
+cap         1313  0.0  0.2 386396 10724 ?        Ssl  14:36   0:00 /usr/libexec/gsd-power
+cap         1314  0.0  0.1 258796  6544 ?        Ssl  14:36   0:00 /usr/libexec/gsd-print-notifications
+cap         1317  0.0  0.1 466800  4988 ?        Ssl  14:36   0:00 /usr/libexec/gsd-rfkill
+cap         1320  0.0  0.1 245232  4916 ?        Ssl  14:36   0:00 /usr/libexec/gsd-screensaver-proxy
+cap         1328  0.0  0.1 475068  5576 ?        Ssl  14:36   0:00 /usr/libexec/gsd-sharing
+cap         1329  0.0  0.1 321448  5264 ?        Ssl  14:36   0:00 /usr/libexec/gsd-smartcard
+cap         1333  0.0  0.1 328484  5332 ?        Ssl  14:36   0:00 /usr/libexec/gsd-sound
+cap         1337  0.0  0.2 350856  8828 ?        Ssl  14:36   0:00 /usr/libexec/gsd-wacom
+cap         1347  0.0  0.1 232260  4156 ?        Sl   14:36   0:00 /usr/libexec/gsd-disk-utility-notify
+cap         1369  0.0  0.1 172516  4608 ?        Sl   14:36   0:00 /usr/libexec/ibus-memconf
+cap         1371  0.0  0.3 815460 14680 ?        Sl   14:36   0:00 /usr/libexec/evolution-data-server/evolution-alarm-notify
+cap         1372  0.0  0.2 357364 11448 ?        Sl   14:36   0:02 /usr/libexec/ibus-extension-gtk3
+cap         1383  0.0  0.1 320132  5432 ?        Sl   14:36   0:00 /usr/libexec/ibus-portal
+cap         1440  0.0  0.1 351304  7744 ?        Sl   14:36   0:00 /usr/libexec/gsd-printer
+cap         1450  0.1  0.5 1323096 23856 ?       Sl   14:36   0:07 /snap/snap-store/638/usr/bin/snap-store --gapplication-service
+cap         1483  0.0  0.1 172516  4792 ?        Sl   14:36   0:00 /usr/libexec/ibus-engine-simple
+cap         1540  0.0  0.2 354068 10736 ?        Ssl  14:36   0:00 /usr/libexec/xdg-desktop-portal-gtk
+colord      1578  0.0  0.1 254332  6288 ?        Ssl  14:36   0:00 /usr/libexec/colord
+cap         1582  0.0  0.2 642308  9132 ?        SNsl 14:36   0:00 /usr/libexec/tracker-miner-fs-3
+cap         1604  0.0  0.2 2608588 10084 ?       Sl   14:36   0:00 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.ScreenSaver
+cap         1641  0.0  0.5 2809300 22700 ?       Sl   14:36   0:01 gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com -M 0 -D 0:0:1920:1080:1:27:81:0:0:0
+cap         1692  0.0  0.1 323952  5360 ?        Sl   14:36   0:00 /usr/libexec/gvfsd-trash --spawner :1.6 /org/gtk/gvfs/exec_spaw/0
+root        1723  0.0  0.3 461360 12352 ?        Ssl  14:36   0:02 /usr/libexec/fwupd/fwupd
+cap         2929 18.5 46.9 6667456 1879672 ?     SLl  14:37  19:03 /snap/pycharm-professional/331/jbr/bin/java -classpath /snap/pycharm-professional/331/lib/app.jar:/snap/pycharm-professional/331/lib/3rd-party-rt.jar:/snap/pycharm-professional/331/lib/util.jar:/snap/pycharm-professional/331/lib/util_rt.jar:/snap/pycharm-professional/331/lib/util-8.jar:/snap/pycharm-professional/331/lib/jps-model.jar:/snap/pycharm-professional/331/lib/stats.jar:/snap/pycharm-professional/331/lib/protobuf.jar:/snap/pycharm-professional/331/lib/external-system-rt.jar:/snap/pycharm-professional/331/lib/intellij-test-discovery.jar:/snap/pycharm-professional/331/lib/forms_rt.jar:/snap/pycharm-professional/331/lib/rd.jar:/snap/pycharm-professional/331/lib/externalProcess-rt.jar:/snap/pycharm-professional/331/lib/annotations-java5.jar:/snap/pycharm-professional/331/lib/async-profiler-windows.jar:/snap/pycharm-professional/331/lib/async-profiler.jar:/snap/pycharm-professional/331/lib/byte-buddy-agent.jar:/snap/pycharm-professional/331/lib/error-prone-annotations.jar:/snap/pycharm-professional/331/lib/groovy.jar:/snap/pycharm-professional/331/lib/intellij-coverage-agent-1.0.706.jar:/snap/pycharm-professional/331/lib/jetbrains-annotations.jar:/snap/pycharm-professional/331/lib/jsch-agent.jar:/snap/pycharm-professional/331/lib/junit4.jar -XX:ErrorFile=/home/cap/java_error_in_pycharm_%p.log -XX:HeapDumpPath=/home/cap/java_error_in_pycharm_.hprof -Xms128m -Xmx1024m -XX:ReservedCodeCacheSize=512m -XX:+IgnoreUnrecognizedVMOptions -XX:+UseG1GC -XX:SoftRefLRUPolicyMSPerMB=50 -XX:CICompilerCount=2 -XX:+HeapDumpOnOutOfMemoryError -XX:-OmitStackTraceInFastThrow -ea -Dsun.io.useCanonCaches=false -Djdk.http.auth.tunneling.disabledSchemes="" -Djdk.attach.allowAttachSelf=true -Djdk.module.illegalAccess.silent=true -Dkotlinx.coroutines.debug=off -XX:ErrorFile=$USER_HOME/java_error_in_idea_%p.log -XX:HeapDumpPath=$USER_HOME/java_error_in_idea.hprof --add-opens=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED --add-opens=java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED -javaagent:/home/cap/Загрузки/jetbra/ja-netfilter.jar=jetbrains -Djb.vmOptionsFile=/home/cap/Загрузки/jetbra/vmoptions/pycharm.vmoptions -Djava.system.class.loader=com.intellij.util.lang.PathClassLoader -Didea.vendor.name=JetBrains -Didea.paths.selector=PyCharm2023.1 -Djna.boot.library.path=/snap/pycharm-professional/331/lib/jna/amd64 -Dpty4j.preferred.native.folder=/snap/pycharm-professional/331/lib/pty4j -Djna.nosys=true -Djna.noclasspath=true -Didea.platform.prefix=Python -Dsplash=true --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.ref=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.nio.charset=ALL-UNNAMED --add-opens=java.base/java.text=ALL-UNNAMED --add-opens=java.base/java.time=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/jdk.internal.vm=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/sun.nio.fs=ALL-UNNAMED --add-opens=java.base/sun.security.ssl=ALL-UNNAMED --add-opens=java.base/sun.security.util=ALL-UNNAMED --add-opens=java.desktop/com.sun.java.swing.plaf.gtk=ALL-UNNAMED --add-opens=java.desktop/java.awt=ALL-UNNAMED --add-opens=java.desktop/java.awt.dnd.peer=ALL-UNNAMED --add-opens=java.desktop/java.awt.event=ALL-UNNAMED --add-opens=java.desktop/java.awt.image=ALL-UNNAMED --add-opens=java.desktop/java.awt.peer=ALL-UNNAMED --add-opens=java.desktop/java.awt.font=ALL-UNNAMED --add-opens=java.desktop/javax.swing=ALL-UNNAMED --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED --add-opens=java.desktop/javax.swing.text.html=ALL-UNNAMED --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED --add-opens=java.desktop/sun.awt.datatransfer=ALL-UNNAMED --add-opens=java.desktop/sun.awt.image=ALL-UNNAMED --add-opens=java.desktop/sun.awt=ALL-UNNAMED --add-opens=java.desktop/sun.font=ALL-UNNAMED --add-opens=java.desktop/sun.java2d=ALL-UNNAMED --add-opens=java.desktop/sun.swing=ALL-UNNAMED --add-opens=jdk.attach/sun.tools.attach=ALL-UNNAMED --add-opens=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-opens=jdk.internal.jvmstat/sun.jvmstat.monitor=ALL-UNNAMED --add-opens=jdk.jdi/com.sun.tools.jdi=ALL-UNNAMED com.intellij.idea.Main
+cap         2997  0.8  1.4 257432 58000 ?        S    14:37   0:53 /usr/bin/Xwayland :0 -rootless -noreset -accessx -core -auth /run/user/1000/.mutter-Xwaylandauth.TQD331 -listen 4 -listen 5 -displayfd 6 -initfd 7
+cap         3002  0.0  0.3 533172 12132 ?        Ssl  14:37   0:00 /usr/libexec/gsd-xsettings
+cap         3055  0.0  0.3 203748 12916 ?        Sl   14:37   0:01 /usr/libexec/ibus-x11
+cap         3090  0.0  0.0   3660  1576 ?        S    14:37   0:00 /snap/pycharm-professional/331/bin/fsnotifier
+cap         3109  0.0  0.2 511340 11976 ?        Sl   14:37   0:00 update-notifier
+cap         3305  0.0  0.1 290572  5868 ?        S    14:40   0:00 /snap/pycharm-professional/331/jbr/lib/jcef_helper --type=zygote --no-zygote-sandbox --disable-in-process-stack-traces --force-device-scale-factor=1.0 --locales-dir-path=/snap/pycharm-professional/331/jbr/lib/locales --log-severity=disable --resources-dir-path=/snap/pycharm-professional/331/jbr/lib --lang=en-US --user-data-dir=/home/cap/.config/cef_user_data --log-file=/home/cap/jcef_2929.log
+cap         3306  0.0  0.1 290556  5080 ?        S    14:40   0:00 /snap/pycharm-professional/331/jbr/lib/jcef_helper --type=zygote --disable-in-process-stack-traces --force-device-scale-factor=1.0 --locales-dir-path=/snap/pycharm-professional/331/jbr/lib/locales --log-severity=disable --resources-dir-path=/snap/pycharm-professional/331/jbr/lib --lang=en-US --user-data-dir=/home/cap/.config/cef_user_data --log-file=/home/cap/jcef_2929.log
+cap         3308  0.0  0.0 290556    48 ?        S    14:40   0:00 /snap/pycharm-professional/331/jbr/lib/jcef_helper --type=zygote --disable-in-process-stack-traces --force-device-scale-factor=1.0 --locales-dir-path=/snap/pycharm-professional/331/jbr/lib/locales --log-severity=disable --resources-dir-path=/snap/pycharm-professional/331/jbr/lib --lang=en-US --user-data-dir=/home/cap/.config/cef_user_data --log-file=/home/cap/jcef_2929.log
+cap         3320  0.0  0.0 900620  1264 ?        Sl   14:40   0:00 /snap/pycharm-professional/331/jbr/lib/jcef_helper --type=gpu-process --locales-dir-path=/snap/pycharm-professional/331/jbr/lib/locales --log-severity=disable --resources-dir-path=/snap/pycharm-professional/331/jbr/lib --lang=en-US --user-data-dir=/home/cap/.config/cef_user_data --gpu-preferences=WAAAAAAAAAAgAAAIAAAAAAAAAAAAAAAAAABgAAAAAAA4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAIAAAAAAAAAABAAAAAAAAAAgAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --disable-in-process-stack-traces --log-file=/home/cap/jcef_2929.log --shared-files --field-trial-handle=0,i,6102910000188794111,17164736693500868547,131072 --disable-features=SpareRendererForSitePerProcess
+cap         3333  0.0  0.0      0     0 ?        Z    14:40   0:00 [jcef_helper] <defunct>
+root        3484  0.0  0.0      0     0 ?        I    14:47   0:01 [kworker/1:2-events]
+cap         4576  0.0  0.1 720332  7960 ?        Sl   14:57   0:00 /usr/bin/snap userd
+cap         5193  1.4  4.3 1424076 173848 ?      SLl  14:58   1:09 /snap/telegram-desktop/4762/usr/bin/telegram-desktop -noupdate -tosettings
+root        5768  0.0  0.0      0     0 ?        I    15:43   0:00 [kworker/u4:1-events_unbound]
+cap         5804  0.2  0.6 200152 25604 ?        Sl   15:47   0:04 /home/cap/PycharmProjects/python_advanced/venv/bin/python /snap/pycharm-professional/331/plugins/python/helpers/pydev/pydevconsole.py --mode=client --host=127.0.0.1 --port=43647
+cap         5820  0.0  0.1  20340  5132 pts/0    Ss   15:47   0:00 /bin/bash --rcfile /snap/pycharm-professional/331/plugins/terminal/jediterm-bash.in -i
+root        5915  0.0  0.0      0     0 ?        I    15:48   0:00 [kworker/u4:3-events_unbound]
+root        6412  0.0  0.0      0     0 ?        I    16:04   0:00 [kworker/1:1-events]
+root        6794  0.0  0.0      0     0 ?        I    16:04   0:00 [kworker/u4:4-ext4-rsv-conversion]
+root        6906  0.0  0.0      0     0 ?        I    16:05   0:00 [kworker/0:0-cgroup_destroy]
+cap         7111 12.7  4.3 34192328 175448 ?     SLl  16:18   0:08 /opt/yandex/browser-beta/yandex_browser
+cap         7119  0.0  0.0  17164   924 ?        S    16:18   0:00 cat
+cap         7120  0.0  0.0  17164   936 ?        S    16:18   0:00 cat
+cap         7122  0.0  0.0 33576908 1892 ?       Sl   16:18   0:00 /opt/yandex/browser-beta/chrome_crashpad_handler --monitor-self --monitor-self-annotation=ptype=crashpad-handler --database=/home/cap/.config/yandex-browser-beta/Crash Reports --metrics-dir=/home/cap/.config/yandex-browser-beta --url=https://crash-reports.browser.yandex.net/submit --annotation=channel=beta --annotation=lsb-release=Ubuntu 22.04.2 LTS --annotation=plat=Linux --annotation=prod=Yandex_Linux --annotation=ver=23.3.1.906 --initial-client-fd=5 --shared-client-connection
+cap         7124  0.0  0.0 33567672 1984 ?       Sl   16:18   0:00 /opt/yandex/browser-beta/chrome_crashpad_handler --no-periodic-tasks --monitor-self-annotation=ptype=crashpad-handler --database=/home/cap/.config/yandex-browser-beta/Crash Reports --url=https://crash-reports.browser.yandex.net/submit --annotation=channel=beta --annotation=lsb-release=Ubuntu 22.04.2 LTS --annotation=plat=Linux --annotation=prod=Yandex_Linux --annotation=ver=23.3.1.906 --initial-client-fd=4 --shared-client-connection
+cap         7130  0.0  0.6 33887708 26856 ?      S    16:18   0:00 /opt/yandex/browser-beta/yandex_browser --type=zygote --no-zygote-sandbox --user-id=0713f13f-1ace-48e2-bd5a-9608bc623d79 --brand-id=yandex --crashpad-handler-pid=7122 --enable-crash-reporter=8ef47038-6df2-45a8-baa6-72546f313acc,beta --change-stack-guard-on-fork=enable
+cap         7131  0.0  0.7 33894364 30876 ?      S    16:18   0:00 /opt/yandex/browser-beta/yandex_browser --type=zygote --user-id=0713f13f-1ace-48e2-bd5a-9608bc623d79 --brand-id=yandex --crashpad-handler-pid=7122 --enable-crash-reporter=8ef47038-6df2-45a8-baa6-72546f313acc,beta --change-stack-guard-on-fork=enable
+cap         7132  0.0  0.0 33563348 2640 ?       S    16:18   0:00 /opt/yandex/browser-beta/nacl_helper
+cap         7135  0.0  0.1 33894392 7964 ?       S    16:18   0:00 /opt/yandex/browser-beta/yandex_browser --type=zygote --user-id=0713f13f-1ace-48e2-bd5a-9608bc623d79 --brand-id=yandex --crashpad-handler-pid=7122 --enable-crash-reporter=8ef47038-6df2-45a8-baa6-72546f313acc,beta --change-stack-guard-on-fork=enable
+cap         7155  1.7  2.5 34174684 103512 ?     Sl   16:18   0:01 /opt/yandex/browser-beta/yandex_browser --type=gpu-process --user-id=0713f13f-1ace-48e2-bd5a-9608bc623d79 --brand-id=yandex --partner-id=beta-public --crashpad-handler-pid=7122 --enable-crash-reporter=8ef47038-6df2-45a8-baa6-72546f313acc,beta --change-stack-guard-on-fork=enable --gpu-preferences=WAAAAAAAAAAgAAAIAAAAAAAAAAAAAAAAAABgAAAAAAA4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAIAAAAAAAAAABAAAAAAAAAAgAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --shared-files --field-trial-handle=0,i,12959203686307413768,1602148847524739217,131072
+cap         7159  1.4  1.5 33930908 63996 ?      Sl   16:18   0:00 /opt/yandex/browser-beta/yandex_browser --type=utility --utility-sub-type=network.mojom.NetworkService --lang=ru --service-sandbox-type=none --user-id=0713f13f-1ace-48e2-bd5a-9608bc623d79 --brand-id=yandex --partner-id=beta-public --crashpad-handler-pid=7122 --enable-crash-reporter=8ef47038-6df2-45a8-baa6-72546f313acc,beta --change-stack-guard-on-fork=enable --process-name=Network Service --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,12959203686307413768,1602148847524739217,131072
+cap         7169  0.0  0.6 33935772 27240 ?      Sl   16:18   0:00 /opt/yandex/browser-beta/yandex_browser --type=utility --utility-sub-type=storage.mojom.StorageService --lang=ru --service-sandbox-type=utility --user-id=0713f13f-1ace-48e2-bd5a-9608bc623d79 --brand-id=yandex --partner-id=beta-public --crashpad-handler-pid=7122 --enable-crash-reporter=8ef47038-6df2-45a8-baa6-72546f313acc,beta --change-stack-guard-on-fork=enable --process-name=Storage Service --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,12959203686307413768,1602148847524739217,131072
+cap         7218 11.0  4.4 1184808024 177228 ?   Sl   16:18   0:06 /opt/yandex/browser-beta/yandex_browser --type=renderer --user-id=0713f13f-1ace-48e2-bd5a-9608bc623d79 --brand-id=yandex --partner-id=beta-public --crashpad-handler-pid=7122 --enable-crash-reporter=8ef47038-6df2-45a8-baa6-72546f313acc,beta --extension-process --help-url=https://api.browser.yandex.ru/redirect/help-beta/ --user-agent-info=beta --web-ntp-url-for-renderer=https://brontp-alpha.yandex.ru/ --translate-security-origin=https://browser.translate.yandex.net/ --enable-instaserp --change-stack-guard-on-fork=enable --first-renderer-process --lang=ru --num-raster-threads=1 --renderer-client-id=5 --time-ticks-at-unix-epoch=-1682595388403214 --launch-time-ticks=6150260800 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,12959203686307413768,1602148847524739217,131072
+cap         7252  0.7  2.8 1184820040 114196 ?   Sl   16:18   0:00 /opt/yandex/browser-beta/yandex_browser --type=renderer --user-id=0713f13f-1ace-48e2-bd5a-9608bc623d79 --brand-id=yandex --partner-id=beta-public --crashpad-handler-pid=7122 --enable-crash-reporter=8ef47038-6df2-45a8-baa6-72546f313acc,beta --help-url=https://api.browser.yandex.ru/redirect/help-beta/ --user-agent-info=beta --web-ntp-url-for-renderer=https://brontp-alpha.yandex.ru/ --translate-security-origin=https://browser.translate.yandex.net/ --ya-custo-process --enable-instaserp --change-stack-guard-on-fork=enable --lang=ru --num-raster-threads=1 --renderer-client-id=10 --time-ticks-at-unix-epoch=-1682595388403214 --launch-time-ticks=6150360364 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,12959203686307413768,1602148847524739217,131072
+cap         7253  1.1  2.7 1184806384 110700 ?   Sl   16:18   0:00 /opt/yandex/browser-beta/yandex_browser --type=renderer --user-id=0713f13f-1ace-48e2-bd5a-9608bc623d79 --brand-id=yandex --partner-id=beta-public --crashpad-handler-pid=7122 --enable-crash-reporter=8ef47038-6df2-45a8-baa6-72546f313acc,beta --help-url=https://api.browser.yandex.ru/redirect/help-beta/ --user-agent-info=beta --web-ntp-url-for-renderer=https://brontp-alpha.yandex.ru/ --translate-security-origin=https://browser.translate.yandex.net/ --ya-custo-process --enable-instaserp --change-stack-guard-on-fork=enable --lang=ru --num-raster-threads=1 --renderer-client-id=11 --time-ticks-at-unix-epoch=-1682595388403214 --launch-time-ticks=6150375780 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,12959203686307413768,1602148847524739217,131072
+root        7266  0.0  0.0      0     0 ?        I    16:18   0:00 [kworker/u4:0-flush-8:0]
+cap         7268  0.9  2.3 1184805424 94664 ?    Sl   16:18   0:00 /opt/yandex/browser-beta/yandex_browser --type=renderer --user-id=0713f13f-1ace-48e2-bd5a-9608bc623d79 --brand-id=yandex --partner-id=beta-public --crashpad-handler-pid=7122 --enable-crash-reporter=8ef47038-6df2-45a8-baa6-72546f313acc,beta --extension-process --help-url=https://api.browser.yandex.ru/redirect/help-beta/ --user-agent-info=beta --web-ntp-url-for-renderer=https://brontp-alpha.yandex.ru/ --translate-security-origin=https://browser.translate.yandex.net/ --enable-instaserp --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=ru --num-raster-threads=1 --renderer-client-id=6 --time-ticks-at-unix-epoch=-1682595388403214 --launch-time-ticks=6150703310 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,12959203686307413768,1602148847524739217,131072
+cap         7287  0.3  2.1 1184799828 87952 ?    Sl   16:18   0:00 /opt/yandex/browser-beta/yandex_browser --type=renderer --user-id=0713f13f-1ace-48e2-bd5a-9608bc623d79 --brand-id=yandex --partner-id=beta-public --crashpad-handler-pid=7122 --enable-crash-reporter=8ef47038-6df2-45a8-baa6-72546f313acc,beta --extension-process --help-url=https://api.browser.yandex.ru/redirect/help-beta/ --user-agent-info=beta --web-ntp-url-for-renderer=https://brontp-alpha.yandex.ru/ --translate-security-origin=https://browser.translate.yandex.net/ --enable-instaserp --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=ru --num-raster-threads=1 --renderer-client-id=7 --time-ticks-at-unix-epoch=-1682595388403214 --launch-time-ticks=6150922194 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,12959203686307413768,1602148847524739217,131072
+root        7320  0.1  0.0      0     0 ?        I    16:19   0:00 [kworker/u4:2-ext4-rsv-conversion]
+cap         7321  5.0  3.7 1184846540 151192 ?   Sl   16:19   0:03 /opt/yandex/browser-beta/yandex_browser --type=renderer --user-id=0713f13f-1ace-48e2-bd5a-9608bc623d79 --brand-id=yandex --partner-id=beta-public --crashpad-handler-pid=7122 --enable-crash-reporter=8ef47038-6df2-45a8-baa6-72546f313acc,beta --help-url=https://api.browser.yandex.ru/redirect/help-beta/ --user-agent-info=beta --web-ntp-url-for-renderer=https://brontp-alpha.yandex.ru/ --translate-security-origin=https://browser.translate.yandex.net/ --enable-instaserp --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=ru --num-raster-threads=1 --renderer-client-id=15 --time-ticks-at-unix-epoch=-1682595388403214 --launch-time-ticks=6152819544 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,12959203686307413768,1602148847524739217,131072
+cap         7564  0.0  1.2 1184783432 51980 ?    Sl   16:19   0:00 /opt/yandex/browser-beta/yandex_browser --type=renderer --user-id=0713f13f-1ace-48e2-bd5a-9608bc623d79 --brand-id=yandex --partner-id=beta-public --crashpad-handler-pid=7122 --enable-crash-reporter=8ef47038-6df2-45a8-baa6-72546f313acc,beta --help-url=https://api.browser.yandex.ru/redirect/help-beta/ --user-agent-info=beta --web-ntp-url-for-renderer=https://brontp-alpha.yandex.ru/ --translate-security-origin=https://browser.translate.yandex.net/ --enable-instaserp --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=ru --num-raster-threads=1 --renderer-client-id=19 --time-ticks-at-unix-epoch=-1682595388403214 --launch-time-ticks=6159232401 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,12959203686307413768,1602148847524739217,131072
+cap         7607  0.0  0.0  21360  3412 pts/0    R+   16:20   0:00 ps aux

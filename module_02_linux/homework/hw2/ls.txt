@@ -1,0 +1,4 @@
+итого 8
+-rw-rw-r-- 1 cap cap  983 мая  1 00:59 get_mean_size.py
+-rw-rw-r-- 1 cap cap    0 мая  1 01:00 ls.txt
+-rw-rw-r-- 1 cap cap 2662 апр 27 00:59 README.md

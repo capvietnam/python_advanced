@@ -7,16 +7,11 @@ import re
 
 app = Flask(__name__)
 
-cars_str = ', '.join(['Chevrolet', 'Renault', 'Ford', 'Lada'])
-cats_list = ['корниш-рекс', 'русская голубая', 'шотландская вислоухая', 'мейн-кун', 'манчкин']
-# TODO это  тоже две константы - имена констант пишутся большими буквами
-
-words = None  # TODO переменные это основной код, расположите их после определения всех функций
+Cars_str = ', '.join(['Chevrolet', 'Renault', 'Ford', 'Lada'])
+Cats_list = ['корниш-рекс', 'русская голубая', 'шотландская вислоухая', 'мейн-кун', 'манчкин']
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 BOOK_FILE = os.path.join(BASE_DIR, 'war_and_peace.txt')
-
-counter_visits = 0  # TODO Аналогично предыдущему
 
 
 @app.route('/hello_world')
@@ -26,12 +21,12 @@ def hello_world():
 
 @app.route('/cars')
 def cars():
-    return {cars_str}
+    return {Cars_str}
 
 
 @app.route('/cats')
 def cats():
-    random_cat = random.choice(cats_list)
+    random_cat = random.choice(Cats_list)
     return random_cat
 
 
@@ -66,4 +61,8 @@ def counter():
 
 
 if __name__ == '__main__':
+
+    words = None
+    counter_visits = 0
+
     app.run(debug=True)

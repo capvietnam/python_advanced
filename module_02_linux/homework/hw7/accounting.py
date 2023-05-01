@@ -12,26 +12,59 @@
 Гарантируется, что переданная дата имеет такой формат и она корректна (никаких 31 февраля).
 """
 
+from datetime import datetime
 from flask import Flask
+from flask import jsonify
 
 app = Flask(__name__)
 
 storage = {}
 
 
-@app.route("/add/<date>/<int:number>")
-def add(date: str, number: int):
-    ...
+@app.route("/add/<string:date>/<int:number>")
+def add(date, number):
+    dt = datetime.strptime(date, "%Y%m%d")
+    year = dt.year
+    month = dt.month
+    day = dt.day
+
+    # Используем setdefault, чтобы создать вложенные словари,
+    # если их еще нет в хранилище
+    storage.setdefault(year, {})
+    storage[year].setdefault(month, {})
+    storage[year][month].setdefault(day, 0)
+
+    storage[year][month][day] += number
+
+    # Возвращаем JSON-объект с результатом
+    return jsonify({'date': date, 'expense': number})
 
 
 @app.route("/calculate/<int:year>")
-def calculate_year(year: int):
-    ...
+def calculate_year(year):
+    year_total = 0
+
+    # Сумма расходов за год
+    if year in storage:
+        for month in storage[year]:
+            for day in storage[year][month]:
+                year_total += storage[year][month][day]
+
+    # Возвращаем JSON-объект с результатом
+    return jsonify({'year': year, 'total': year_total})
 
 
 @app.route("/calculate/<int:year>/<int:month>")
-def calculate_month(year: int, month: int):
-    ...
+def calculate_month(year, month):
+    month_total = 0
+
+    # Сумма расходов за месяц
+    if year in storage and month in storage[year]:
+        for day in storage[year][month]:
+            month_total += storage[year][month][day]
+
+    # Возвращаем JSON-объект с результатом
+    return jsonify({'year': year, 'month': month, 'total': month_total})
 
 
 if __name__ == "__main__":

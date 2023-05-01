@@ -10,11 +10,23 @@ $ ls -l | python3 get_mean_size.py
 import sys
 
 
-def get_mean_size(ls_output: str) -> float:
-    ...
+def get_mean_size(lines: str) -> float:
+    sizes = []
+    for line in lines:
+        if line[0] == '-':
+            parts = line.split()
+            if len(parts) >= 5:
+                try:
+                    size = int(parts[4])
+                    sizes.append(size)
+                except ValueError:
+                    pass
+    if sizes:
+        return sum(sizes) / len(sizes)
+    else:
+        return 0
 
 
 if __name__ == '__main__':
-    data: str = sys.stdin.read()
-    mean_size: float = get_mean_size(data)
-    print(mean_size)
+    lines = sys.stdin.readlines()[1:]
+    print(get_mean_size(lines))

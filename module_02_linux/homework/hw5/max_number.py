@@ -18,9 +18,17 @@ from flask import Flask
 app = Flask(__name__)
 
 
-@app.route("/max_number/...")
-def max_number():
-    ...
+@app.route('/max_number/<path:nums>', methods=['GET'])
+def max_number(nums):
+    number_list = nums.split('/')
+    # Оставляем только числа
+    number_list = [int(x) for x in number_list if x.isdigit()]
+    # Если список чисел не пустой, находим максимальное
+    if number_list:
+        max_num = max(number_list)
+        return f'Максимальное число: {max_num}'
+    else:
+        return 'Среди параметров нет чисел'
 
 
 if __name__ == "__main__":
