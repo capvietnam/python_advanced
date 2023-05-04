@@ -26,6 +26,8 @@ class TestDecrypt(unittest.TestCase):
         self.assertEqual(decrypt('абра........'), '')
         self.assertEqual(decrypt('абр......a.'), 'a')
         self.assertEqual(decrypt('1.......................'), '')
+    # TODO стоило поместить все исходные данные для тестирования в словарь (по одному для каждой группы) или список
+    #  списков и выполнять все "кейсы" в цикле
 
 
 if __name__ == '__main__':
