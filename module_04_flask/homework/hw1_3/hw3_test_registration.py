@@ -6,88 +6,127 @@
 
 import unittest
 from hw1_registration import app
-import unittest
-from unittest import TestCase
-
-import unittest
-from wtforms import ValidationError
-from hw1_registration import RegistrationForm
-from hw2_validators import number_length, NumberLength
 
 
-class TestRegistrationForm(unittest.TestCase):
-
+class TestFlaskApp(unittest.TestCase):
     def setUp(self):
-        self.app = app.test_client()
-        app.config['TESTING'] = True
-        app.config['DEBUG'] = False
+        self.test_client = app.test_client()
+        app.config["WTF_CSRF_ENABLED"] = False
 
-    def test_email_field_valid(self):
-        form = RegistrationForm(email='valid_email@example.com')
-        self.assertTrue(form.email.validate(form))
+    def tearDown(self):
+        pass
 
-    def test_email_field_invalid(self):
-        form = RegistrationForm(email='invalid_email')
-        self.assertFalse(form.email.validate(form))
+    def test_valid_email_phone_name_address_index(self):
+        # Тест для проверки корректности валидации email адреса
 
-    def test_email_validator_valid(self):
-        validator = RegistrationForm().email.validators[1]
-        validator('form', 'email@example.com')
+        # Данные для тестового запроса
+        data = {
+            'email': 'test@example.com',
+            'phone': 1234567890,
+            'name': 'Test User',
+            'address': 'Test Address',
+            'index': 12345,
+            'comment': 'Test comment',
+        }
 
-    def test_email_validator_invalid(self):
-        validator = RegistrationForm().email.validators[1]
-        with self.assertRaises(ValidationError):
-            validator('form', 'invalid_email')
+        # Отправляем запрос на endpoint с валидными данными
+        response = self.test_client.post('/registration', json=data)
 
-    def test_phone_field_valid(self):
-        form = RegistrationForm(phone='1234567')
-        self.assertTrue(form.phone.validate(form))
+        # Убеждаемся, что ответ сервера - успешная регистрация
+        self.assertIn(b'Successfully registered user test@example.com with phone +71234567890', response.data)
 
-    def test_phone_field_invalid(self):
-        form = RegistrationForm(phone='123')
-        self.assertFalse(form.phone.validate(form))
+    def test_invalid_email(self):
+        # Тест для проверки невалидного email адреса
 
-    def test_phone_validator_valid(self):
-        validator = number_length(min=7, max=15, message='Invalid phone number')
-        validator('form', '1234567')
+        # Данные для тестового запроса с невалидным email адресом
+        data = {
+            'email': 'invalid email',
+            'phone': 1234567890,
+            'name': 'Test User',
+            'address': 'Test Address',
+            'index': 12345,
+            'comment': 'Test comment'
+        }
 
-    def test_phone_validator_invalid(self):
-        validator = number_length(min=7, max=15, message='Invalid phone number')
-        with self.assertRaises(ValidationError):
-            validator('form', '123')
+        # Отправляем запрос на endpoint с невалидным email адресом
+        response = self.test_client.post('/registration', json=data)
 
-    def test_name_field_valid(self):
-        form = RegistrationForm(name='John Doe')
-        self.assertTrue(form.name.validate(form))
+        # Ожидаем ошибку в ответе сервера, так как email адрес невалидный
+        self.assertIn(b"Invalid input, {'email': ['Invalid email format']}", response.data)
 
-    def test_name_field_invalid(self):
-        form = RegistrationForm(name='')
-        self.assertFalse(form.name.validate(form))
+    def test_invalid_phone(self):
+        # Тест для проверки корректности валидации email адреса
 
-    def test_address_field_valid(self):
-        form = RegistrationForm(address='123 Main St')
-        self.assertTrue(form.address.validate(form))
+        # Данные для тестового запроса
+        data = {
+            'email': 'test@example.com',
+            'phone': 12345678900,
+            'name': 'Test User',
+            'address': 'Test Address',
+            'index': 12345,
+            'comment': 'Test comment',
+        }
 
-    def test_address_field_invalid(self):
-        form = RegistrationForm(address='')
-        self.assertFalse(form.address.validate(form))
+        # Отправляем запрос на endpoint с валидными данными
+        response = self.test_client.post('/registration', json=data)
 
-    def test_index_field_valid(self):
-        form = RegistrationForm(index=12345)
-        self.assertTrue(form.index.validate(form))
+        # Убеждаемся, что ответ сервера - успешная регистрация
+        self.assertIn(b"Invalid input, {'phone': ['Invalid phone number']}", response.data)
 
-    def test_index_field_invalid(self):
-        form = RegistrationForm(index=-1)
-        self.assertFalse(form.index.validate(form))
+    def test_no_name(self):
+        # Тест для проверки корректности валидации email адреса
 
-    def test_index_validator_valid(self):
-        validator = RegistrationForm().index.validators[1]
-        validator('form', '12345')
+        # Данные для тестового запроса
+        data = {
+            'email': 'test@example.com',
+            'phone': 1234567890,
+            'address': 'Test Address',
+            'index': 12345,
+            'comment': 'Test comment',
+        }
 
-    def test_index_validator_invalid(self):
-        validator = RegistrationForm().index.validators[1]
-        with self.assertRaises(ValidationError):
-            validator('form', '-1')
+        # Отправляем запрос на endpoint с валидными данными
+        response = self.test_client.post('/registration', json=data)
+
+        # Убеждаемся, что ответ сервера - успешная регистрация
+        self.assertIn(b"Invalid input, {'name': ['This field is required.']}", response.data)
+
+    def test_no_address(self):
+        # Тест для проверки корректности валидации email адреса
+
+        # Данные для тестового запроса
+        data = {
+            'email': 'test@example.com',
+            'phone': 1234567890,
+            'name': 'Test User',
+            'index': 12345,
+            'comment': 'Test comment',
+        }
+
+        # Отправляем запрос на endpoint с валидными данными
+        response = self.test_client.post('/registration', json=data)
+
+        # Убеждаемся, что ответ сервера - успешная регистрация
+        self.assertIn(b"Invalid input, {'address': ['This field is required.']}", response.data)
+
+    def test_invalid_index(self):
+        # Тест для проверки корректности валидации email адреса
+
+        # Данные для тестового запроса
+        data = {
+            'email': 'test@example.com',
+            'phone': 1234567890,
+            'name': 'Test User',
+            'address': 'Test Address',
+            'index': 'y',
+            'comment': 'Test comment',
+        }
+
+        # Отправляем запрос на endpoint с валидными данными
+        response = self.test_client.post('/registration', json=data)
+
+        # Убеждаемся, что ответ сервера - успешная регистрация
+        self.assertIn(b"Invalid input, {'index': ['Not a valid integer value.', 'Invalid index']}", response.data)
 
 
 if __name__ == '__main__':

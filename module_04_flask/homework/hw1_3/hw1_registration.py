@@ -20,7 +20,7 @@ app = Flask(__name__)
 
 class RegistrationForm(FlaskForm):
     email = StringField('Email', validators=[InputRequired(), Email(message='Invalid email format')])
-    phone = IntegerField('Phone Number', validators=[InputRequired(), number_length(7, 15,
+    phone = IntegerField('Phone Number', validators=[InputRequired(), number_length(10, 10,
                                                                                     message='Invalid phone number')])
     name = StringField('Name', validators=[InputRequired()])
     address = StringField('Address', validators=[InputRequired()])
