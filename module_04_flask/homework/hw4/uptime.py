@@ -13,13 +13,9 @@ app = Flask(__name__)
 
 @app.route('/uptime')
 def uptime():
-    cmd_output = subprocess.check_output(['systeminfo'])
-    for line in cmd_output.decode('cp866').split('\n'):
-        if 'Система работает с' in line: # для русской версии Windows
-        # if 'System Boot Time' in line: # для английской версии Windows
-            pass
-        uptime_str = line.split(':')[0].strip()
-        return f"Current uptime is {uptime_str}"
+    cmd_output = subprocess.check_output(['uptime'])
+    uptime_str = cmd_output.decode().split(',')[0]
+    return f"Current uptime is {uptime_str}"
 
 
 if __name__ == '__main__':
