@@ -7,21 +7,28 @@
 чтобы можно было ещё перенаправить только stdout или только stderr.
 """
 
-from types import TracebackType
-from typing import Type, Literal, IO
+import sys
+from typing import IO, Optional
+from io import StringIO
 
 
 class Redirect:
-    def __init__(self, stdout: IO = None, stderr: IO = None) -> None:
-        ...
+    def __init__(self, stdout: Optional[IO] = None, stderr: Optional[IO] = None):
+        self.stdout = stdout or StringIO()
+        self.stderr = stderr or StringIO()
 
     def __enter__(self):
-        ...
+        self.stdout_replaced = sys.stdout
+        self.stderr_replaced = sys.stderr
+        sys.stdout = self.stdout
+        sys.stderr = self.stderr
+        return self
 
-    def __exit__(
-            self,
-            exc_type: Type[BaseException] | None,
-            exc_val: BaseException | None,
-            exc_tb: TracebackType | None
-    ) -> Literal[True] | None:
-        ...
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        sys.stdout = self.stdout_replaced
+        sys.stderr = self.stderr_replaced
+        if exc_type:
+            # если произошла ошибка, то нужно вывести traceback
+            print(exc_type, exc_val, exc_tb, file=self.stderr)
+
+
