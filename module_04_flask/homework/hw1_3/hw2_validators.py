@@ -25,6 +25,7 @@ def number_length(min_: int, max_: int, message: Optional[str] = None):
 
 class NumberLength:
     def init(self, min_: int, max_: int, message: Optional[str] = None):
+        # TODO этот и следующий методы должны иметь в имени двойное подчеркивание до и после имени
         self.min_ = min_
         self.max_ = max_
         self.message = message
