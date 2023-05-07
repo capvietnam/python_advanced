@@ -3,21 +3,21 @@
 Если выкидывается неожидаемый тип исключения, то он прокидывается выше.
 """
 
-from typing import Collection, Type, Literal
+
+from typing import Collection, Type, Literal, Set
 from types import TracebackType
 
 
 class BlockErrors:
-    def __init__(self, errors: Collection) -> None:
-        ...
+    def __init__(self, err_types: Set[Exception]):
+        self.err_types = err_types
 
-    def __enter__(self) -> None:
-        ...
+    def __enter__(self):
+        pass
 
-    def __exit__(
-            self,
-            exc_type: Type[BaseException] | None,
-            exc_val: BaseException | None,
-            exc_tb: TracebackType | None
-    ) -> Literal[True] | None:
-        ...
+    def __exit__(self, exc_type, exc_value, traceback):
+        if exc_type is not None:
+            if issubclass(exc_type, tuple(self.err_types)):
+                return True
+            else:
+                return False
