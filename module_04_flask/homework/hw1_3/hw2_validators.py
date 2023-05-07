@@ -24,13 +24,12 @@ def number_length(min_: int, max_: int, message: Optional[str] = None):
 
 
 class NumberLength:
-    def init(self, min_: int, max_: int, message: Optional[str] = None):
-        # TODO этот и следующий методы должны иметь в имени двойное подчеркивание до и после имени
+    def __init__(self, min_: int, max_: int, message: Optional[str] = None):
         self.min_ = min_
         self.max_ = max_
         self.message = message
 
-    def call(self, form: FlaskForm, field: Field):
+    def __call__(self, form: FlaskForm, field: Field):
         number = str(field.data)
         if not self.min_ <= len(number) <= self.max_:
             if self.message is not None:

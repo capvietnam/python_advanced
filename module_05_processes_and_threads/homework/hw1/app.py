@@ -10,8 +10,9 @@
 которая на вход принимает порт и запускает по нему сервер. Если порт будет занят,
 она должна найти процесс по этому порту, завершить его и попытаться запустить сервер ещё раз.
 """
+import os
+import subprocess
 from typing import List
-
 from flask import Flask
 
 app = Flask(__name__)
@@ -24,10 +25,26 @@ def get_pids(port: int) -> List[int]:
     @return: список PID процессов, занимающих порт
     """
     if not isinstance(port, int):
-        raise ValueError
+        raise ValueError("Port must be an integer")
 
-    pids: List[int] = []
-    ...
+    # Выполняем команду lsof для получения списка процессов по порту
+    command = subprocess.Popen(["lsof", "-i", f":{port}"], stdout=subprocess.PIPE)
+    # Считываем вывод команды в байтовом формате
+    output = command.stdout.read()
+    # Декодируем вывод в строку
+    output = output.decode("utf-8")
+    # Разбиваем вывод на строки
+    lines = output.split("\n")
+
+    # Из каждой строки получаем PID процесса и добавляем в список
+    pids = []
+    for line in lines:
+        if "LISTEN" in line:
+            parts = line.split()
+            # Первый элемент в строке содержит PID
+            pid = int(parts[1])
+            pids.append(pid)
+
     return pids
 
 
@@ -37,18 +54,26 @@ def free_port(port: int) -> None:
     @param port: порт
     """
     pids: List[int] = get_pids(port)
-    ...
+    for pid in pids:
+        os.kill(pid, 9)
+    return run_server(5000)
 
 
-def run(port: int) -> None:
+def run_server(port: int) -> None:
     """
     Запускает flask-приложение по переданному порту.
     Если порт занят каким-либо процессом, завершает его.
     @param port: порт
     """
-    free_port(port)
-    app.run(port=port)
+    # Пытаемся запустить сервер
+    try:
+        app.run(port=port)
+    # Если порт занят, завершаем процессы и пытаемся запустить сервер снова
+    except OSError:
+        print(f"Port {port} is already in use")
+        free_port(port)
+        app.run(port=port)
 
 
 if __name__ == '__main__':
-    run(5000)
+    run_server(5000)
