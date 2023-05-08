@@ -17,7 +17,4 @@ class BlockErrors:
 
     def __exit__(self, exc_type, exc_value, traceback):
         if exc_type is not None:
-            if issubclass(exc_type, tuple(self.err_types)):  # TODO просто верните результат: return  issubclass(exc_type, tuple(self.err_types))
-                return True
-            else:
-                return False
+            return issubclass(exc_type, tuple(self.err_types))

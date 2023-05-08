@@ -65,16 +65,9 @@ def run_server(port: int) -> None:
     Если порт занят каким-либо процессом, завершает его.
     @param port: порт
     """
-    # Пытаемся запустить сервер
-    try:
-        app.run(port=port)
-    # Если порт занят, завершаем процессы и пытаемся запустить сервер снова
-    # TODO Это случае приложение просто не стартует, без выбрасывания исключения. Поэтому последовательность действий
-    #  такая: сначала освобождаем порт 5000, а потом запускаем сервер
-    except OSError:
-        print(f"Port {port} is already in use")
+    if get_pids(port):
         free_port(port)
-        app.run(port=port)
+    app.run(port=port)
 
 
 if __name__ == '__main__':
