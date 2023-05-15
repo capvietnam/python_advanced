@@ -14,12 +14,19 @@
 Напишите функцию is_strong_password, которая принимает на вход пароль в виде строки,
 а возвращает булево значение, которое показывает, является ли пароль хорошим по новым стандартам безопасности.
 """
-
+import flask
 import getpass
 import hashlib
 import logging
+from logging.handlers import RotatingFileHandler
 
-logger = logging.getLogger("password_checker")
+from flask import Flask
+
+app = Flask(__name__)
+
+logger = RotatingFileHandler('app.log', maxBytes=10000, backupCount=1)
+logger.setLevel(logging.INFO)
+app.logger.addHandler(logger)
 
 
 def is_strong_password(password: str) -> bool:
@@ -27,14 +34,14 @@ def is_strong_password(password: str) -> bool:
 
 
 def input_and_check_password() -> bool:
-    logger.debug("Начало input_and_check_password")
+    app.logger.debug("Начало input_and_check_password")
     password: str = getpass.getpass()
 
     if not password:
-        logger.warning("Вы ввели пустой пароль.")
+        app.logger.warning("Вы ввели пустой пароль.")
         return False
     elif is_strong_password(password):
-        logger.warning("Вы ввели слишком слабый пароль")
+        app.logger.warning("Вы ввели слишком слабый пароль")
         return False
 
     try:
@@ -45,21 +52,21 @@ def input_and_check_password() -> bool:
         if hasher.hexdigest() == "098f6bcd4621d373cade4e832627b4f6":
             return True
     except ValueError as ex:
-        logger.exception("Вы ввели некорректный символ ", exc_info=ex)
+        app.logger.exception("Вы ввели некорректный символ ", exc_info=ex)
 
     return False
 
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.DEBUG)
-    logger.info("Вы пытаетесь аутентифицироваться в Skillbox")
+    app.logger.info("Вы пытаетесь аутентифицироваться в Skillbox")
     count_number: int = 3
-    logger.info(f"У вас есть {count_number} попыток")
+    app.logger.info(f"У вас есть {count_number} попыток")
 
     while count_number > 0:
         if input_and_check_password():
             exit(0)
         count_number -= 1
 
-    logger.error("Пользователь трижды ввёл не правильный пароль!")
+    app.logger.error("Пользователь трижды ввёл не правильный пароль!")
     exit(1)
