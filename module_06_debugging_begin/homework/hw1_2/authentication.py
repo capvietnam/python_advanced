@@ -14,22 +14,29 @@
 Напишите функцию is_strong_password, которая принимает на вход пароль в виде строки,
 а возвращает булево значение, которое показывает, является ли пароль хорошим по новым стандартам безопасности.
 """
+import re
+
 import flask
 import getpass
 import hashlib
 import logging
+from datetime import datetime, time
 from logging.handlers import RotatingFileHandler
 
 from flask import Flask
 
 app = Flask(__name__)
-
-logger = RotatingFileHandler('app.log', maxBytes=10000, backupCount=1)
-logger.setLevel(logging.INFO)
-app.logger.addHandler(logger)
+with open('/usr/share/dict/words', 'r') as file:
+    list_world = set()
+    for line in file:
+        list_world.add(line.strip())
 
 
 def is_strong_password(password: str) -> bool:
+    password = password.lower()
+    list_password = set(re.findall(r'\b\S+\b', password))
+    if not list_world.intersection(list_password):
+        return False
     return True
 
 
@@ -58,7 +65,11 @@ def input_and_check_password() -> bool:
 
 
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.DEBUG)
+    logging.basicConfig(level=logging.DEBUG,
+                        filename="stderr.log",
+                        format="%(asctime)s - %(module)s - %(levelname)s - %(funcName)s: %(lineno)d - %(message)s",
+                        datefmt='%H:%M:%S'
+                        )
     app.logger.info("Вы пытаетесь аутентифицироваться в Skillbox")
     count_number: int = 3
     app.logger.info(f"У вас есть {count_number} попыток")

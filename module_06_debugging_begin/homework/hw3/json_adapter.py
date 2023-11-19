@@ -30,7 +30,7 @@ import logging
 
 class JsonAdapter(logging.LoggerAdapter):
     def process(self, msg, kwargs):
-        new_message = msg
+        new_message = msg.replace('"', "'")
         return new_message, kwargs
 
 
