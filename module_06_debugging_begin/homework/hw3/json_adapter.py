@@ -24,14 +24,14 @@ logger.info('Сообщение')
 
 Вам нужно дописать метод process так, чтобы в логах была всегда JSON-валидная строка.
 """
-
+import json
 import logging
 
 
 class JsonAdapter(logging.LoggerAdapter):
     def process(self, msg, kwargs):
-        new_message = msg.replace('"', "'")
-        return new_message, kwargs
+        msg = json.dumps(msg, ensure_ascii=False)
+        return msg, kwargs
 
 
 if __name__ == '__main__':
